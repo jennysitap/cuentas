@@ -19,8 +19,8 @@ class TransactionSeeder extends Seeder {
             'type' => 'income',
             'description' => 'jennysota',
             'user_id' => $user->id,
-            'category_id' => $category->id,
-            'account_id' => $account->id,
+            'category_id' => 1,
+            'account_id' => 1,
         ]);
     }
 }

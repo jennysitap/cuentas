@@ -12,9 +12,9 @@ class Transaction extends Model {
         'ammount', 'type', 'description', 'user_id', 'category_id', 'account_id'
     ];
 
-    public function user() {
+    /*public function user() {
         return $this->belongsTo(User::class);
-    }
+    }*/
 
     public function category() {
         return $this->belongsTo(Category::class);
@@ -22,5 +22,9 @@ class Transaction extends Model {
 
     public function account() {
         return $this->belongsTo(Account::class);
+    }
+
+    public function user(){
+        return $this->hasOne(User::class,'id','user_id');
     }
 }

@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Hash;
 class UserSeeder extends Seeder {
     public function run(): void {
         User::factory()->create([
-            'name' => 'Administradora',
+            'name' => 'Jennifer',
             'email' => 'jennys@gmail.com',
             'password' => Hash::make('password'),
         ]);
