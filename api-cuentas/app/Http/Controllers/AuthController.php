@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Auth;
 class AuthController extends Controller
 {
     public function login(Request $request){
-        $credentils = $request->only("email","password");
+        $credentials = $request->only("email","password");
     try{
         if(! $access_token = JWTAuth::attempt($credentials)){
             return response()
